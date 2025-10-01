@@ -1,73 +1,86 @@
-# React + TypeScript + Vite
+# 💸 React Tip Calculator
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern **Tip Calculator App** built with **React + TypeScript**, powered by **Zustand** for state management and **GSAP** for premium UI micro-interactions.
 
-Currently, two official plugins are available:
+This project is part of my portfolio, designed to demonstrate **clean React architecture, state handling, component design, and polished UI/UX animations**.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## React Compiler
+## 📸 Screenshot
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+![Tip Calculator Screenshot](./public/assets/app-screenshot.png)
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## ✨ Features
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+- **Bill & People inputs** with validation (no zero for people, decimals allowed for bill).
+- **Preset tip selection** (5%, 10%, 15%, 25%, 50%) with active state highlighting.
+- **Custom tip input** with:
+  - Char-by-char reveal animation.
+  - Validation (1–100%).
+  - Auto-routing to preset buttons if matches (5/10/15/25/50).
+- **Reset button** that restores initial state without reloading the page.
+- **GSAP animations** inspired by Awwwards websites:
+  - Magnetic hover.
+  - Glossy sheen sweep.
+  - Pulse on commit.
+  - Shake on invalid input.
+- **Responsive UI** (mobile-first, TailwindCSS).
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+---
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+## 🛠️ Tech Stack
+
+- [React 18](https://react.dev/) + [TypeScript](https://www.typescriptlang.org/)
+- [Zustand](https://docs.pmnd.rs/zustand/getting-started/introduction) – lightweight global state store
+- [Tailwind CSS](https://tailwindcss.com/) – utility-first styling
+- [GSAP](https://greensock.com/gsap/) – high-performance animations
+- Vite – fast dev/build tool
+
+---
+
+## 🚀 Getting Started
+
+Clone the repo:
+
+```bash
+git clone https://github.com/yourusername/react-tip-calculator.git
+cd react-tip-calculator
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+Install dependencies
+`npm install`
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+Run locally
+`npm run dev`
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+Build for production
+`npm run build`
+
+---
+
+## Code Highlights
+
+    •	CustomButton.tsx → Custom tip field with GSAP micro-interactions (magnetic hover, sheen sweep, pulse & shake).
+    •	PercentButton.tsx → Preset tip selection with active state binding to the store.
+    •	Calculator.store.ts → Zustand store with full state + reset method.
+
+---
+
+## Purpose
+
+This project was built to practice and showcase:
+• Writing clean, typed React components.
+• State management with Zustand (an alternative to Redux).
+• UI polish with GSAP, inspired by modern award-winning websites.
+• Developer experience improvements with TypeScript + Vite.
+
+---
+
+## Contact
+
+    •	Portfolio: simoneconti.work
+    •	GitHub: github.com/simoneconti.work
+    •	LinkedIn: linkedin.com/in/simonecontidev/
+    •	Email: simonecontisid@gmail.com

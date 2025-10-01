@@ -5,7 +5,7 @@ function App() {
 
   return (
     <>
-    <div className="flex justify-center my-10">
+    <div className="flex justify-center my-10 m-autoå">
       <h1 className='uppercase text-3xl text-white'>Split the Bill</h1>
     </div>
     <Calculator />
