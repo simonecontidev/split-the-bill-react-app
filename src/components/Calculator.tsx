@@ -21,6 +21,7 @@ export const Calculator = () => {
         
         <h2 className='font-bold text-bg mb-2'>Select tip %</h2>
         <div className='grid grid-cols-2 gap-4 mb-8'>
+            
         {
         percents.map((percent:number) => <PercentButton key={percent} percent={percent} />)
         }

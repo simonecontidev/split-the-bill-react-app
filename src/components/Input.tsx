@@ -54,7 +54,7 @@ export const Input = ({label, value, variant, setValue}:Props) => {
       type="text" 
       value={localValue}
       onChange={handleChange}
-      className="bg-grey-50 p-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-black cursor-pointer h-12 text-right pr-4 text-2xl font-bold w-full"
+      className="bg-grey-50 p-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-black  cursor-pointer h-12 text-right pr-4 text-2xl font-bold w-full"
       />
     </div>
   )
