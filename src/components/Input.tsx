@@ -10,6 +10,7 @@ interface Props{
 export const Input = ({label, value, variant, setValue}:Props) => {
 
   const[localValue, setLocalValue] = useState(value.toString());
+  const[error, setError] = useState(false);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const userInput = e.target.value;
@@ -27,10 +28,15 @@ export const Input = ({label, value, variant, setValue}:Props) => {
     //UI
     setLocalValue(userInput);
 
+    // no allow 0 in people
     //Store
-    setValue(Number(userInput) || 0);
-
+    if(userInput === '0'){
+      setError(true);
+    }else{
+      setError(false);
+      setValue(Number(userInput));
   }
+}
   return (
     <div className="flex flex-col mb-8">
 
@@ -39,8 +45,9 @@ export const Input = ({label, value, variant, setValue}:Props) => {
             htmlFor="">
                 {label}
             </label>
-      
-            <p className= "text-red-500 font-bold hidden">Can't be zero</p>
+            {
+              error && (<p className= "text-red-500 font-bold">Can't be zero</p>)
+            }
         </div>
       <input 
       id='bill' 

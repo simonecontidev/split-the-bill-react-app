@@ -33,8 +33,8 @@ export const Calculator = () => {
         
         <Input 
         label='Number of people' 
-        value={0}
-        setValue={() => {}}
+        value={store.people}
+        setValue={store.setPeople}
         variant='people'
         />
     </div>
