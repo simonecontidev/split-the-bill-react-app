@@ -1,4 +1,4 @@
-# 💸 React Tip Calculator
+# React Tip Calculator
 
 A modern **Tip Calculator App** built with **React + TypeScript**, powered by **Zustand** for state management and **GSAP** for premium UI micro-interactions.
 
@@ -6,13 +6,14 @@ This project is part of my portfolio, designed to demonstrate **clean React arch
 
 ---
 
-## 📸 Screenshot
+## Screenshot
 
-![Tip Calculator Screenshot](./public/assets/app-screenshot.png)
+![Tip Calculator Screenshot]
+https://github.com/simonecontidev/split-the-bill-react-app/blob/main/src/assets/app-screenshot.png
 
 ---
 
-## ✨ Features
+## Features
 
 - **Bill & People inputs** with validation (no zero for people, decimals allowed for bill).
 - **Preset tip selection** (5%, 10%, 15%, 25%, 50%) with active state highlighting.
@@ -30,7 +31,7 @@ This project is part of my portfolio, designed to demonstrate **clean React arch
 
 ---
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 - [React 18](https://react.dev/) + [TypeScript](https://www.typescriptlang.org/)
 - [Zustand](https://docs.pmnd.rs/zustand/getting-started/introduction) – lightweight global state store
@@ -40,7 +41,7 @@ This project is part of my portfolio, designed to demonstrate **clean React arch
 
 ---
 
-## 🚀 Getting Started
+## Getting Started
 
 Clone the repo:
 
