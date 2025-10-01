@@ -48,13 +48,22 @@ cd react-tip-calculator
 ```
 
 Install dependencies
-`npm install`
+
+```bash
+npm install
+```
 
 Run locally
-`npm run dev`
+
+```bash
+npm run dev
+```
 
 Build for production
-`npm run build`
+
+```bash
+npm run build
+```
 
 ---
 
