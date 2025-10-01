@@ -6,7 +6,7 @@ interface Props{
 export const PercentButton = ({percent, isCustom = false}:Props) => {
 
     const styles = isCustom 
-    ? ' bg-sky-800 text-white placeholder:text-bg' 
+    ? ' bg-blue-400 text-white placeholder:text-bg' 
     : 'bg-bg text-amber-50 hover:bg-blue-300 hover:text-bg'
     ;
 
