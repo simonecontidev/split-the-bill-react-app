@@ -8,8 +8,7 @@ function App() {
     <div className="flex justify-center my-10">
       <h1>Split the Bill</h1>
     </div>
-
-<Calculator />
+    <Calculator />
     </>
   )
 }

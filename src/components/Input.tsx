@@ -19,7 +19,7 @@ export const Input = ({label, value}:Props) => {
       id='bill' 
       type="text" 
       value={value}
-      className="bg-grey-50 p-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-black cursor-pointer h-12 text-right pr-4 text-2xl font-bold"
+      className="bg-grey-50 p-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-black cursor-pointer h-12 text-right pr-4 text-2xl font-bold w-full"
       />
     </div>
   )

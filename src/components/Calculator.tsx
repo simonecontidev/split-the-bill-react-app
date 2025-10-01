@@ -1,10 +1,14 @@
-import { Input, PercentButton } from '../components'
+import { Input, PercentButton, Totals } from '../components'
 
 const percents : number[] = [5,10,15,25,50];
 
 export const Calculator = () => {
   return (
-    <div className='bg-white p-8 w-[375px] m-auto rounded-[25px]'>
+    <div className='bg-white p-8 w-[375px] m-auto rounded-[25px] my-10 
+    md:w-[608px] md:py-12 md:px-20
+    lg:w-[920px] lg:flex lg:gap-12 lg:p-8'>
+
+        <div className='lg: flex-1'>
         <Input label='Bill' value={0}/>
         
         <h2 className='font-bold text-bg mb-2'>Select tip %</h2>
@@ -16,8 +20,12 @@ export const Calculator = () => {
         <PercentButton isCustom percent={0}/>
 
         </div>
+    
+
         
         <Input label='Number of people' value={0}/>
+</div>
+        <Totals/>
     </div>
   )
 }
