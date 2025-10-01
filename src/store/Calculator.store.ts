@@ -38,7 +38,9 @@ export const useCalculatorStore = create<Calculator>()(
 
 
 
-tipAmount: () => (get().bill * get().tip / 100) / get().people,
+    tipAmount: () => (get().bill * get().tip / 100) / get().people,
+
+    total: () => (get().bill + get().tipAmount()) / get().people,
     })
     
 

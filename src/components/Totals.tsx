@@ -8,7 +8,7 @@ export const Totals = () => {
     <div className="bg-black rounded-[15px] py-6 text-white px-8 lg:w-[413px] lg:flex lg: flex-col lg:justify-between">
         <div>
         <TotalItem text='Tip Amount' value={store.tipAmount()}/>
-        <TotalItem text='Total' value={32.79} />
+        <TotalItem text='Total' value={store.total()} />
         </div>
         <ButtonReset text="Reset"/>
 
