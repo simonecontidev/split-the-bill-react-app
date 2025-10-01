@@ -1,1 +1,27 @@
 @import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+/* general styles */
+@theme{
+  --color-bg: #000;
+  --color-text: #f9fafb;
+  --color-primary: #3b82f6;
+  --color-secondary: #6b7280;
+  --color-accent: #10b981;
+  --color-border: #e5e7eb;
+
+  --font-Space-Mono: 'Space Mono', monospace;
+}
+
+@font-face {
+  font-family: 'Space Mono';
+  font-style: normal;
+  font-weight: 400;
+  src: url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap') format('woff2');
+}
+
+body{
+  @apply bg-[var(--color-bg)] text-[var(--color-text)] font-Space-Mono;
+}
+
+
