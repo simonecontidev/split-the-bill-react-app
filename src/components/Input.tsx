@@ -3,20 +3,25 @@ import { useState } from "react";
 interface Props{
     label: string;
     value: number;
+    variant: "bill" | "people";
 }
 
-export const Input = ({label, value}:Props) => {
+export const Input = ({label, value, variant}:Props) => {
 
   const[localValue, setLocalValue] = useState(value.toString());
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const userInput = e.target.value;
     
-
     /* verify that the input is a number */
     const numberRegExp = /^\d*$/;
 
-    const isValid = numberRegExp.test(userInput)
+    /* allow decimal numbers */
+    const decimalRegExp = /^\d*\.?\d*$/;
+
+    const regExp = variant === 'bill' ? decimalRegExp : numberRegExp;
+
+    const isValid = regExp.test(userInput)
     if(!isValid) return;
     setLocalValue(userInput);
   }

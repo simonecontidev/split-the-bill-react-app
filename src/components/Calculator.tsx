@@ -15,6 +15,7 @@ export const Calculator = () => {
         <Input 
         label='Bill' 
         value={store.bill}
+        variant='bill'
         />
         
         <h2 className='font-bold text-bg mb-2'>Select tip %</h2>
@@ -29,8 +30,12 @@ export const Calculator = () => {
     
 
         
-        <Input label='Number of people' value={0}/>
-</div>
+        <Input 
+        label='Number of people' 
+        value={0}
+        variant='people'/>
+        
+    </div>
         <Totals/>
     </div>
   )
