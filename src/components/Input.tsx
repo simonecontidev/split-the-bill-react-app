@@ -1,9 +1,17 @@
+import { useState } from "react";
+
 interface Props{
     label: string;
     value: number;
 }
 
 export const Input = ({label, value}:Props) => {
+
+  const[localValue, setLocalValue] = useState('20');
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setLocalValue(e.target.value);
+  }
   return (
     <div className="flex flex-col mb-8">
 
@@ -18,7 +26,8 @@ export const Input = ({label, value}:Props) => {
       <input 
       id='bill' 
       type="text" 
-      value={value}
+      value={localValue}
+      onChange={handleChange}
       className="bg-grey-50 p-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-black cursor-pointer h-12 text-right pr-4 text-2xl font-bold w-full"
       />
     </div>
