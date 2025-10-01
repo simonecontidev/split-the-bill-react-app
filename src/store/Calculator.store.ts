@@ -14,6 +14,9 @@ interface Calculator {
   //value calculated
   tipAmount:()=> number;
   total:()=> number;
+
+    reset: () => void;
+
 }
 
 export const useCalculatorStore = create<Calculator>()(
@@ -41,6 +44,13 @@ export const useCalculatorStore = create<Calculator>()(
     tipAmount: () => (get().bill * get().tip / 100) / get().people,
 
     total: () => (get().bill + get().tipAmount()) / get().people,
+
+    reset: () =>
+      set(
+        { bill: 0, people: 1, tip: 0 },
+        false,
+        "calculator/reset"
+      ),
     })
     
 

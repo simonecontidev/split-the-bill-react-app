@@ -10,7 +10,7 @@ export const Totals = () => {
         <TotalItem text='Tip Amount' value={store.tipAmount()}/>
         <TotalItem text='Total' value={store.total()} />
         </div>
-        <ButtonReset text="Reset"/>
+        <ButtonReset text="Reset the tips"/>
 
     </div>
   )
