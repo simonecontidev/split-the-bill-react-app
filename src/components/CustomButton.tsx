@@ -7,7 +7,6 @@ export const CustomButton = () => {
   const { tip, setTip } = useCalculatorStore();
   const [isEditable, setIsEditable] = useState(false);
   const [inputValue, setInputValue] = useState<string>("");
-
   const openEditor = () => {
     // If the tip is NOT preset, prefill; if it is preset, start empty
     setInputValue(PRESET_TIPS.has(tip) ? "" : (tip ? String(tip) : ""));
