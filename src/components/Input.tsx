@@ -7,10 +7,18 @@ interface Props{
 
 export const Input = ({label, value}:Props) => {
 
-  const[localValue, setLocalValue] = useState('20');
+  const[localValue, setLocalValue] = useState(value.toString());
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setLocalValue(e.target.value);
+    const userInput = e.target.value;
+    
+
+    /* verify that the input is a number */
+    const numberRegExp = /^\d*$/;
+
+    const isValid = numberRegExp.test(userInput)
+    if(!isValid) return;
+    setLocalValue(userInput);
   }
   return (
     <div className="flex flex-col mb-8">
@@ -21,7 +29,7 @@ export const Input = ({label, value}:Props) => {
                 {label}
             </label>
       
-            <p className= "text-orange-400 font-bold hidden">Can't be zero</p>
+            <p className= "text-red-500 font-bold hidden">Can't be zero</p>
         </div>
       <input 
       id='bill' 

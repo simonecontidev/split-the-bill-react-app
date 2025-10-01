@@ -5,5 +5,5 @@ interface Calculator {
 }
 
 export const useCalculatorStore = create<Calculator>(() => ({
-    bill: 0,
+    bill: 100,
 }));
