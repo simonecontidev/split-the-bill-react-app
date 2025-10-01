@@ -8,7 +8,7 @@ This project is part of my portfolio, designed to demonstrate **clean React arch
 
 ## Screenshot
 
-## ![Tip Calculator Screenshot](screenshot.png)
+## ![Tip Calculator Screenshot](app-screenshot.png)
 
 ## Features
 
