@@ -1,9 +1,15 @@
+import {Calculator} from './components/calculator'
+
+
 function App() {
 
   return (
     <>
-      <h1>Calculator</h1>
-      
+    <div className="flex justify-center my-10">
+      <h1>Split the Bill</h1>
+    </div>
+
+<Calculator />
     </>
   )
 }
