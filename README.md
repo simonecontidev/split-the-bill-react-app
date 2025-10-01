@@ -8,8 +8,7 @@ This project is part of my portfolio, designed to demonstrate **clean React arch
 
 ## Screenshot
 
-![Tip Calculator Screenshot]
-https://github.com/simonecontidev/split-the-bill-react-app/blob/main/src/assets/app-screenshot.png
+![Tip Calculator Screenshot](public/assets/app-screenshot.png)
 
 ---
 
