@@ -6,11 +6,15 @@ interface Props{
 export const Input = ({label, value}:Props) => {
   return (
     <div className="flex flex-col mb-8">
-      <label className="font-bold text-black mb-2" 
-      htmlFor="">
-        {label}
-      </label>
+
+        <div className="flex justify-between mb-2">
+            <label className="font-bold text-black mb-2" 
+            htmlFor="">
+                {label}
+            </label>
       
+            <p className= "text-orange-400 font-bold hidden">Can't be zero</p>
+        </div>
       <input 
       id='bill' 
       type="text" 
