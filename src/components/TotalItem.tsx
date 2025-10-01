@@ -5,7 +5,7 @@ interface Props{
 
 
 
-export const TotalItem = ({text, value} = Props) => {
+export const TotalItem = ({text, value}:Props) => {
   return (
     <div>
         <div className="flex justify-between mb-7">
