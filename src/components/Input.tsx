@@ -3,10 +3,11 @@ import { useState } from "react";
 interface Props{
     label: string;
     value: number;
+    setValue: (value: number) => void;
     variant: "bill" | "people";
 }
 
-export const Input = ({label, value, variant}:Props) => {
+export const Input = ({label, value, variant, setValue}:Props) => {
 
   const[localValue, setLocalValue] = useState(value.toString());
 
@@ -23,7 +24,12 @@ export const Input = ({label, value, variant}:Props) => {
 
     const isValid = regExp.test(userInput)
     if(!isValid) return;
+    //UI
     setLocalValue(userInput);
+
+    //Store
+    setValue(Number(userInput) || 0);
+
   }
   return (
     <div className="flex flex-col mb-8">

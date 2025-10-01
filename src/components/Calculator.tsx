@@ -15,6 +15,7 @@ export const Calculator = () => {
         <Input 
         label='Bill' 
         value={store.bill}
+        setValue={store.setBill}
         variant='bill'
         />
         
@@ -33,8 +34,9 @@ export const Calculator = () => {
         <Input 
         label='Number of people' 
         value={0}
-        variant='people'/>
-        
+        setValue={() => {}}
+        variant='people'
+        />
     </div>
         <Totals/>
     </div>
