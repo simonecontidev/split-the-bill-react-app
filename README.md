@@ -1,93 +1,99 @@
-# React Tip Calculator
+# 💸 Split the Bill — React + TypeScript App
 
-A modern **Tip Calculator App** built with **React + TypeScript**, powered by **Zustand** for state management and **GSAP** for premium UI micro-interactions.
+A simple yet polished **tip & bill splitter** built with **React + TypeScript + Zustand + Tailwind CSS**.  
+Designed with smooth micro-interactions (Framer Motion) and a clean UI that feels “alive”.
 
-This project is part of my portfolio, designed to demonstrate **clean React architecture, state handling, component design, and polished UI/UX animations**.
-
----
-
-## Screenshot
-
-## ![Tip Calculator Screenshot](app-preview.png)
-
-## Features
-
-- **Bill & People inputs** with validation (no zero for people, decimals allowed for bill).
-- **Preset tip selection** (5%, 10%, 15%, 25%, 50%) with active state highlighting.
-- **Custom tip input** with:
-  - Char-by-char reveal animation.
-  - Validation (1–100%).
-  - Auto-routing to preset buttons if matches (5/10/15/25/50).
-- **Reset button** that restores initial state without reloading the page.
-- **GSAP animations** inspired by Awwwards websites:
-  - Magnetic hover.
-  - Glossy sheen sweep.
-  - Pulse on commit.
-  - Shake on invalid input.
-- **Responsive UI** (mobile-first, TailwindCSS).
+![preview](./public/preview.jpg)
 
 ---
 
-## Tech Stack
+## ✨ Features
 
-- [React 18](https://react.dev/) + [TypeScript](https://www.typescriptlang.org/)
-- [Zustand](https://docs.pmnd.rs/zustand/getting-started/introduction) – lightweight global state store
-- [Tailwind CSS](https://tailwindcss.com/) – utility-first styling
-- [GSAP](https://greensock.com/gsap/) – high-performance animations
-- Vite – fast dev/build tool
+### 🧮 Smart Calculator
+
+- Input for **bill amount**, **number of people**, and **tip percentage** (preset or custom).
+- Real-time computation of:
+  - Tip amount per person
+  - Total per person
+
+### 🌗 Auto Light / Dark Theme
+
+- Syncs automatically with the system setting.
+- Optional **toggle** to switch between `Light / Dark / System`.
+- Zero flash on load thanks to inline theme preload script.
+
+### 🧠 Smooth Animations (Framer Motion)
+
+- **Fade + Scale** when results appear or update.
+- **Slide-up** transitions for input sections.
+- **Button feedback**: subtle scale & shadow on hover/tap.
+- **Animated counter**: totals count up dynamically to the new value.
+- **Pulse** effect on the “Calculate” button.
+- **Easter egg 🥳** when the split is perfectly even (no decimals).
+
+### 💾 State Management
+
+- **Zustand** store for centralized, reactive state.
+- Persisted in `localStorage` — your last calculation is saved.
+
+### ♿ Accessibility
+
+- Keyboard focus & `aria-pressed` on toggle buttons.
+- `aria-live` regions for updated totals.
+
+### 🧰 Stack
+
+| Tool                  | Purpose                         |
+| --------------------- | ------------------------------- |
+| **React 18 + Vite**   | Base framework & bundler        |
+| **TypeScript**        | Type-safe logic                 |
+| **Tailwind CSS v4**   | Utility-first styling           |
+| **Framer Motion**     | Animations & micro-interactions |
+| **Zustand**           | State management                |
+| **ESLint + Prettier** | Clean code & consistency        |
 
 ---
 
-## Getting Started
+## 🚀 Getting Started
 
-Clone the repo:
+### 1️⃣ Clone the repo
 
 ```bash
-git clone https://github.com/yourusername/react-tip-calculator.git
-cd react-tip-calculator
+git clone https://github.com/yourusername/split-the-bill-react.git
+cd split-the-bill-react
 ```
 
-Install dependencies
-
-```bash
 npm install
-```
 
-Run locally
+# or
 
-```bash
+pnpm install
+
 npm run dev
-```
+Then visit 👉 http://localhost:5173
 
-Build for production
+### Folder Structure
 
-```bash
-npm run build
-```
-
----
-
-## Code Highlights
-
-    •	CustomButton.tsx → Custom tip field with GSAP micro-interactions (magnetic hover, sheen sweep, pulse & shake).
-    •	PercentButton.tsx → Preset tip selection with active state binding to the store.
-    •	Calculator.store.ts → Zustand store with full state + reset method.
-
----
-
-## Purpose
-
-This project was built to practice and showcase:
-• Writing clean, typed React components.
-• State management with Zustand (an alternative to Redux).
-• UI polish with GSAP, inspired by modern award-winning websites.
-• Developer experience improvements with TypeScript + Vite.
-
----
-
-## Contact
-
-    •	Portfolio: simoneconti.work
-    •	GitHub: github.com/simoneconti.work
-    •	LinkedIn: linkedin.com/in/simonecontidev/
-    •	Email: simonecontisid@gmail.com
+src/
+├─ components/
+│ ├─ AnimatedNumber.tsx # Counter for totals
+│ ├─ PercentButton.tsx # Tip percentage buttons
+│ ├─ ButtonReset.tsx # Reset button
+│ ├─ Totals.tsx # Results panel
+│ └─ PerfectSplitEasterEgg.tsx# 🎉 Easter egg
+│
+├─ store/
+│ └─ Calculator.store.ts # Zustand logic
+│
+├─ theme/
+│ └─ ThemeProvider.tsx # Auto dark/light system sync
+│
+├─ ui/
+│ ├─ MotionButton.tsx # Reusable animated button
+│ └─ motion.tsx # Reusable animation variants
+│
+├─ utils/
+│ └─ money.ts # Helper for perfect split check
+│
+├─ App.tsx
+└─ main.tsx
