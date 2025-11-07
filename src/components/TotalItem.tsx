@@ -1,20 +1,22 @@
-interface Props{
- text: string;
- value: number;   
-}
+// src/components/TotalItem.tsx
+import { AnimatedNumber } from "./AnimatedNumber";
 
-
-
-export const TotalItem = ({text, value}:Props) => {
+export const TotalItem = ({
+  text,
+  value,
+  prefix = "€",
+}: {
+  text: string;
+  value: number;
+  prefix?: string;
+}) => {
   return (
-    <div>
-        <div className="flex justify-between mb-7">
-            <div>
-             <p className="font-bold">{text}</p>
-             <p className="text-[.8125rem] text-grey-100">/ person</p>
-            </div>
-            <p className="font-bold text-[2rem] text-sky-100 md:text-5xl">{value.toFixed(2)}</p>
-        </div>
+    <div className="flex justify-between mb-7">
+      <div>
+        <p className="font-bold">{text}</p>
+        <p className="text-[0.8125rem] text-gray-400">/ person</p>
+      </div>
+      <AnimatedNumber value={value} prefix={prefix} />
     </div>
-  )
-}
+  );
+};
