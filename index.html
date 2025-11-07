@@ -1,6 +1,17 @@
 <!doctype html>
 <html lang="en">
   <head>
+    <script>
+  (function () {
+    const STORAGE_KEY = "theme-preference";
+    const stored = localStorage.getItem(STORAGE_KEY);
+    const systemDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+    const choice = stored || "system";
+    const isDark = choice === "dark" || (choice === "system" && systemDark);
+    if (isDark) document.documentElement.classList.add("dark");
+    document.documentElement.style.colorScheme = isDark ? "dark" : "light";
+  })();
+</script>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
