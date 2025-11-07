@@ -3,7 +3,7 @@ import { useTheme } from "@/theme/ThemeProvider";
 import { motion } from "framer-motion";
 
 export default function ThemeToggle() {
-  const { theme, setTheme, isDark } = useTheme();
+  const { theme, setTheme } = useTheme();
 
   const next = () => {
     setTheme(theme === "light" ? "system" : theme === "system" ? "dark" : "light");

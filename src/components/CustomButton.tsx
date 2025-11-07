@@ -1,4 +1,4 @@
-import React, { useState, type ChangeEvent, type KeyboardEvent } from "react";
+import { useState, type ChangeEvent, type KeyboardEvent } from "react";
 import { useCalculatorStore } from "../store/Calculator.store";
 
 const PRESET_TIPS = new Set([5, 10, 15, 25, 50]);
@@ -7,8 +7,8 @@ export const CustomButton = () => {
   const { tip, setTip } = useCalculatorStore();
   const [isEditable, setIsEditable] = useState(false);
   const [inputValue, setInputValue] = useState<string>("");
+
   const openEditor = () => {
-    // If the tip is NOT preset, prefill; if it is preset, start empty
     setInputValue(PRESET_TIPS.has(tip) ? "" : (tip ? String(tip) : ""));
     setIsEditable(true);
   };
@@ -26,22 +26,17 @@ export const CustomButton = () => {
       setIsEditable(false);
       return;
     }
-
     const num = Number(inputValue);
     if (Number.isNaN(num) || num <= 0 || num > 100) {
       setIsEditable(false);
       return;
     }
-
     if (PRESET_TIPS.has(num)) {
-      // It's a preset: select the relative button and DO NOT keep the custom one
       setTip(num);
-      setInputValue("");        // empty so the Custom goes back to "Custom"
+      setInputValue("");
       setIsEditable(false);
       return;
     }
-
-    // It's really custom: save as custom and show percentage on Custom button
     setTip(num);
     setIsEditable(false);
   };
@@ -51,7 +46,6 @@ export const CustomButton = () => {
     if (e.key === "Escape") setIsEditable(false);
   };
 
-  // Show percentage on Custom button ONLY if tip is not one of the presets
   const showCustomValue = !PRESET_TIPS.has(tip) && tip > 0;
 
   return (
