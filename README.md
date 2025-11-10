@@ -12,7 +12,7 @@
 A simple yet polished **tip & bill splitter** built with **React + TypeScript + Zustand + Tailwind CSS**.  
 Designed with smooth micro-interactions (Framer Motion) and a clean UI that feels “alive”.
 
-![preview](./public/preview.jpg)
+[Live Demo](https://splitbill.simoneconti.work/) 
 
 ---
 
