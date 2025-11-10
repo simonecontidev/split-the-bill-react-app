@@ -12,6 +12,13 @@
 A simple yet polished **tip & bill splitter** built with **React + TypeScript + Zustand + Tailwind CSS**.  
 Designed with smooth micro-interactions (Framer Motion) and a clean UI that feels “alive”.
 
+Percent presets + custom entry, subtle celebratory micro-interactions when totals align.
+Dark/Light mode with system sync and accessible contrast ratios.
+Calculate and split totals in seconds: tip presets + custom input, tax handling, and uneven shares per person with immediate feedback.
+Smooth UX details: input masking, live validation, rounding modes, and a celebratory micro-animation when amounts resolve cleanly.
+Dark/Light mode with system sync and WCAG-aware contrast, fully keyboard-navigable controls, and clear error states.
+Snappy state updates and zero layout shift for a distraction-free flow on mobile and desktop.
+
 [Live Demo](https://splitbill.simoneconti.work/) 
 
 ---
